@@ -14,7 +14,7 @@ ________
 ###### 1. 安装radius
 
 ```yum -y install freeradius freeradius-utils freeradius-mysql```
-###### 2. 新建一个数据库radius, 导入这张数据表：https://github.com/glzjin/Radius-install/raw/master/all.sql
+###### 2. 新建一个数据库radius, 导入这张数据表：https://raw.githubusercontent.com/WooSoftware/anytutorial/master/all.sql
 
 ```sql
     create database radius;
@@ -78,12 +78,12 @@ client_table = “nas”
 ```
 然后用wget覆盖几个文件：
 ```
-    wget *** -O /etc/raddb/sites-available/default
-    wget *** -O /etc/raddb/mods-available/counter
-    wget *** -O /etc/raddb/mods-config/sql/main/mysql/queries.conf
-    wget *** -O /etc/raddb/mods-config/sql/counter/mysql/dailycounter.conf
-    wget *** -O /etc/raddb/mods-config/sql/counter/mysql/monthlycounter.conf
-    wget *** -O /etc/raddb/mods-config/sql/counter/mysql/noresetcounter.conf
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/default -O /etc/raddb/sites-available/default
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/counter -O /etc/raddb/mods-available/counter
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/queries.conf -O /etc/raddb/mods-config/sql/main/mysql/queries.conf
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/dailycounter.conf -O /etc/raddb/mods-config/sql/counter/mysql/dailycounter.conf
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/monthlycounter.conf -O /etc/raddb/mods-config/sql/counter/mysql/monthlycounter.conf
+    wget https://raw.githubusercontent.com/WooSoftware/anytutorial/master/noresetcounter.conf -O /etc/raddb/mods-config/sql/counter/mysql/noresetcounter.conf
 ```
 最后：
 ```
